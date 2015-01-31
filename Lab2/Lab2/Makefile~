@@ -1,0 +1,10 @@
+all: test prueba
+
+test: test.cpp 
+		g++ test.cpp -o test.o -lglut -lGL  
+		
+prueba: prueba.o model.h
+		g++ -lGLU -lGL -lglut prueba.o model.o -o prueba 
+
+clean: 
+	rm -rf *o test prueba

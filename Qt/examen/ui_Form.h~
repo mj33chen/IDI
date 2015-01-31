@@ -1,0 +1,129 @@
+/********************************************************************************
+** Form generated from reading UI file 'Form.ui'
+**
+** Created by: Qt User Interface Compiler version 5.2.1
+**
+** WARNING! All changes made in this file will be lost when recompiling UI file!
+********************************************************************************/
+
+#ifndef UI_FORM_H
+#define UI_FORM_H
+
+#include <QtCore/QVariant>
+#include <QtWidgets/QAction>
+#include <QtWidgets/QApplication>
+#include <QtWidgets/QButtonGroup>
+#include <QtWidgets/QDialog>
+#include <QtWidgets/QHBoxLayout>
+#include <QtWidgets/QHeaderView>
+#include <QtWidgets/QLabel>
+#include <QtWidgets/QPushButton>
+#include <QtWidgets/QSlider>
+#include <QtWidgets/QSpacerItem>
+#include <QtWidgets/QSpinBox>
+#include <QtWidgets/QVBoxLayout>
+
+QT_BEGIN_NAMESPACE
+
+class Ui_Dialog
+{
+public:
+    QVBoxLayout *verticalLayout_2;
+    QHBoxLayout *horizontalLayout;
+    QLabel *label;
+    QSlider *horizontalSlider;
+    QHBoxLayout *horizontalLayout_2;
+    QLabel *label_2;
+    QSpinBox *spinBox;
+    QVBoxLayout *verticalLayout;
+    QSpacerItem *verticalSpacer;
+    QHBoxLayout *horizontalLayout_3;
+    QSpacerItem *horizontalSpacer;
+    QPushButton *pushButton;
+
+    void setupUi(QDialog *Dialog)
+    {
+        if (Dialog->objectName().isEmpty())
+            Dialog->setObjectName(QStringLiteral("Dialog"));
+        Dialog->resize(400, 300);
+        verticalLayout_2 = new QVBoxLayout(Dialog);
+        verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
+        horizontalLayout = new QHBoxLayout();
+        horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
+        label = new QLabel(Dialog);
+        label->setObjectName(QStringLiteral("label"));
+
+        horizontalLayout->addWidget(label);
+
+        horizontalSlider = new QSlider(Dialog);
+        horizontalSlider->setObjectName(QStringLiteral("horizontalSlider"));
+        horizontalSlider->setOrientation(Qt::Horizontal);
+
+        horizontalLayout->addWidget(horizontalSlider);
+
+
+        verticalLayout_2->addLayout(horizontalLayout);
+
+        horizontalLayout_2 = new QHBoxLayout();
+        horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
+        label_2 = new QLabel(Dialog);
+        label_2->setObjectName(QStringLiteral("label_2"));
+
+        horizontalLayout_2->addWidget(label_2);
+
+        spinBox = new QSpinBox(Dialog);
+        spinBox->setObjectName(QStringLiteral("spinBox"));
+
+        horizontalLayout_2->addWidget(spinBox);
+
+
+        verticalLayout_2->addLayout(horizontalLayout_2);
+
+        verticalLayout = new QVBoxLayout();
+        verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
+        verticalSpacer = new QSpacerItem(20, 118, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout->addItem(verticalSpacer);
+
+        horizontalLayout_3 = new QHBoxLayout();
+        horizontalLayout_3->setObjectName(QStringLiteral("horizontalLayout_3"));
+        horizontalSpacer = new QSpacerItem(218, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_3->addItem(horizontalSpacer);
+
+        pushButton = new QPushButton(Dialog);
+        pushButton->setObjectName(QStringLiteral("pushButton"));
+
+        horizontalLayout_3->addWidget(pushButton);
+
+
+        verticalLayout->addLayout(horizontalLayout_3);
+
+
+        verticalLayout_2->addLayout(verticalLayout);
+
+
+        retranslateUi(Dialog);
+        QObject::connect(pushButton, SIGNAL(clicked()), Dialog, SLOT(close()));
+
+        QMetaObject::connectSlotsByName(Dialog);
+    } // setupUi
+
+    void retranslateUi(QDialog *Dialog)
+    {
+        Dialog->setWindowTitle(QApplication::translate("Dialog", "Dialog", 0));
+        label->setText(QApplication::translate("Dialog", "Value", 0));
+        label_2->setText(QApplication::translate("Dialog", "Spin value", 0));
+        pushButton->setText(QApplication::translate("Dialog", "&Exit", 0));
+    } // retranslateUi
+
+};
+
+namespace Ui {
+    class Dialog: public Ui_Dialog {};
+} // namespace Ui
+
+QT_END_NAMESPACE
+
+#endif // UI_FORM_H
+
